@@ -12,17 +12,26 @@
         <h1>CalculadoraDeEdad</h1>
         <p>Escriba su nombre y fecha de nacimiento</p>
         <form action="">
-            <input type="text" name="" id="nombre" name="nombre" required>
-            <input type="date" name="" id="fechaNacimiento" name="fechaNacimiento" required>
-            <input type="button" value="Calcular Edad" onclick="calculadoraDeEdad(pasarFechaAString())">
+            <input type="text" name="nombre" id="nombre" required>
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+            <input type="submit" value="Calcular Edad" onclick="calculadoraDeEdad(pasarFechaAString())">
         </form>
     </div>
     <div>
-     <input type="text" id="fruta-input" placeholder="Escribe una fruta..." />
-    <button onclick="buscarFruta()">Buscar</button>
+        <input type="text" id="fruta-input" placeholder="Escribe una fruta..." />
+        <button onclick="buscarFruta()">Buscar</button>
     </div>
-        <div>
-    <button onclick="duplicarNumeros()">duplicar</button>
+        
+    <div>
+        <button onclick="ejercicio3()">Ej3</button>
+    </div>
+
+    <div>
+        <button onclick="ejercicio4()">Ej4</button>
+    </div>
+
+    <div>
+        <button onclick="duplicarNumeros()">duplicar</button>
     </div>
     <script src="./js/ejercicios.js"></script>
     <script src="./js/utils.js"></script>

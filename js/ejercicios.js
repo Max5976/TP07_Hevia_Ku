@@ -22,7 +22,8 @@ function calculadoraDeEdad(fecha) {
     console.log(anio);
     console.log(mes);
     console.log(dia);
-    let nombre = getElementById("nombre");
+    const nombre = document.getElementById("nombre").value;
+    console.log(nombre);
     console.log(`Hola ${nombre}, tenés ${anio} años.`);
     pantalla.innerText = `Hola ${nombre}, tenés ${anio} años.`
 }
@@ -45,9 +46,63 @@ frutas.forEach(fruta => {
       }
     }
 
+
 //3
 
+function ejercicio3() {
+    if (10 == '10') {
+      console.log("Hola1");
+    }
+    else {
+      console.log("Chau1");
+    }
+    
+    //En éste último se puede ver que se comprueba si los dos números son iguales sin darle importancia alguna a que sean de distintos tipos de datos.
+    
+    if (10 === '10') {
+      console.log("Hola2");
+    }
+    else {
+      console.log("Chau2");
+    }
+    
+    //En éste se ve como el resultado es falso por que los dos valores no son del mismo tipo de dato.
+    
+    const numero = 10.6;
 
+    console.log(typeof numero); 
+    //Es tipo "number" como todos los números con o sin decimales.
+
+    if (true == 1) {
+      console.log("Hola3");
+    }
+    else {
+      console.log("Chau3");
+    }
+
+    //true y 1 son iguales ya que al no comparar el tipo de dato, como true y false están creados en un código binario de 0 y 1 (siendo 1 true y 0 false), serán iguales.
+
+    pantalla.innerText = `10 == '10' y 10 === '10' son distintos porque === compara también que sean del mismo valor además de solo el numero y por esto dos = es verdadero y tres es falso. Los números con decimales serán del tipo de valor number como los no decimales. Como los valores booleanos se basan en 0 y 1, entonces true sera == a uno ya que no se compara el tipo de dato.`
+  }
+
+//4
+  
+  function ejercicio4() {
+    const ciudad = {
+      nombre: "Dublín",
+      fechaFundacion: "Alrededor de 841 d.C.",
+      poblacion: 592713,
+      extension: "115 km²"
+    }
+
+    for (let clave in ciudad) {
+      console.log(`Clave: ${clave} - Valor: ${ciudad[clave]}`);
+      pantalla.innerText = `Nombre: ${ciudad.nombre}, Fecha de Fundación: ${ciudad.fechaFundacion}, Población: ${ciudad.poblacion}, Extensión: ${ciudad.extension}`
+    }
+
+  }
+
+//5
 
     const numeros = [1,2,3,4,5,6,7,8,9,10];
     consolo.log(numeros);
@@ -58,7 +113,11 @@ function duplicarNumeros(){
       console.log(NumerosDuplicados);
     }    
         
-        
+//6
+
+function ejercicio6() {
+
+}
         
         
         
