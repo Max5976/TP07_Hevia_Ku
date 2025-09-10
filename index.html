@@ -18,7 +18,7 @@
         </form>
     </div>
     <div>
-        <input type="text" id="fruta-input" placeholder="Escribe una fruta..." />
+        <input type="text" id="fruta-input" placeholder="Escribe una fruta..." required/>
         <button onclick="buscarFruta()">Buscar</button>
     </div>
         
@@ -33,6 +33,17 @@
     <div>
         <button onclick="duplicarNumeros()">duplicar</button>
     </div>
+    
+    <div>
+        <button onclick="triangulo()">Generar Triángulos</button>
+    </div>
+
+    <div>
+   <input type="text" id="nombres" placeholder="Ej: Ana, Pedro, Alberto, Maria" required>
+  <button type="button" onclick="mostrarNombresConA()">Mostrar</button>
+  <div id="resultado"></div>
+    </div> 
+    
     <script src="./js/ejercicios.js"></script>
     <script src="./js/utils.js"></script>
 </body>

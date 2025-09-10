@@ -115,10 +115,42 @@ function duplicarNumeros(){
         
 //6
 
-function ejercicio6() {
+function triangulo() {
+  
+  console.log("Triángulo 1:")
+  const simbolo = ["*", "*", "*", "*", "*"];
+  const triangulo1 = simbolo.map((simbolo, i) => "*".repeat(i + 1));
+  console.log(triangulo1.join("\n"));
 
+  console.log("Triángulo 2:")
+  const simbolo2 = ["-", "-", "-", "-", "-"];
+  const filas = simbolo2.length;
+
+  const triangulo2 = simbolo2.map((simbolo2, i) => {
+    const guiones = "-".repeat(filas - i - 1);
+    const asteriscos = "*".repeat(2 * i + 1);
+    return guiones + asteriscos + guiones;
+  });
+
+  console.log(triangulo2.join("\n"));
+
+  pantalla.innerText = `${triangulo1.join("\n")} \n \n ${triangulo2.join("\n")}`
 }
-        
+
+
+function mostrarNombresConA() {
+  
+  let entrada = document.getElementById("nombres").value;
+  let nombres = entrada.split(",").map(n => n.trim());
+  let nombresConA = nombres.filter(n => n.charAt(0).toUpperCase() === "A");
+  document.getElementById("resultado").innerHTML = nombresConA.join(", ");
+}
+
+  
+
+
+
+
         
         
         
