@@ -137,6 +137,7 @@ function triangulo() {
   pantalla.innerText = `${triangulo1.join("\n")} \n \n ${triangulo2.join("\n")}`
 }
 
+//7
 
 function mostrarNombresConA() {
   
@@ -145,6 +146,59 @@ function mostrarNombresConA() {
   let nombresConA = nombres.filter(n => n.charAt(0).toUpperCase() === "A");
   document.getElementById("resultado").innerHTML = nombresConA.join(", ");
 }
+
+//8
+
+function reemplazarPalabras() {
+  let cadena = document.getElementById("cosas").value;
+  let palabra = document.getElementById("palabraParaReemplazar").value;
+  let palabraReemplazadora = document.getElementById("palabraDeReemplazo").value;
+  
+  console.log(cadena);
+  let cadenaNueva = cadena.replaceAll(palabra, palabraReemplazadora);
+  console.log(cadenaNueva);
+  pantalla.innerText = `${cadenaNueva}`;
+}
+
+//9
+
+function CortarTexto(){
+  let texto = document.getElementById("texto").value;
+  let numero = document.getElementById("numero").value;
+  let Resultado = texto.slice(0,numero);
+  pantalla.innerText = `${Resultado}`;
+}
+
+//10
+
+function stringConSeparador() {
+  let string = document.getElementById("lista").value;
+  let lista = string.split(",").map(item => item.trim());
+  let listaStringizada = lista.join("-");
+  pantalla.innerText = `${listaStringizada}`;
+}
+
+//11
+
+function  calcularRecaudacion(){
+  let entrada = document.getElementById("pedidos").value;
+  let listaPedidos = entrada.split(",").map(p => p.trim());
+    let total = 0;
+      listaPedidos.forEach(pedido => {
+        let partes = pedido.split(":");
+        if (partes.length == 2) {
+          let monto = parseFloat(partes[1]);
+          if (!isNaN(monto)) {
+            total += monto;
+          }
+        }
+      });
+   pantalla.innerText = `Total: $${total}`
+}
+
+
+  
+
 
   
 

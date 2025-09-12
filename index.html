@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,44 +7,78 @@
     <title>TPSiete</title>
 </head>
 <body>
-    <div id="resultado" style="border: 1px solid black"></div>
-    <div class="calcularEdad">
+    <h1>Bienvenidos al mejor sitio web, Planety: Ejercicios de Javascript.</h1>
+    <div id="resultado"></div>
+    <div class="ejercicio">
         <h1>CalculadoraDeEdad</h1>
         <p>Escriba su nombre y fecha de nacimiento</p>
         <form action="">
-            <input type="text" name="nombre" id="nombre" required>
+            <input type="text" name="nombre" id="nombre" placeholder="Ej: Matías" required>
             <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
             <input type="submit" value="Calcular Edad" onclick="calculadoraDeEdad(pasarFechaAString())">
         </form>
     </div>
-    <div>
+    <div class="ejercicio">
+        <h1>Frutas</h1>
         <input type="text" id="fruta-input" placeholder="Escribe una fruta..." required/>
         <button onclick="buscarFruta()">Buscar</button>
     </div>
         
-    <div>
+    <div class="ejercicio">
+        <h1>Ej3</h1>
         <button onclick="ejercicio3()">Ej3</button>
     </div>
 
-    <div>
+    <div class="ejercicio">
+        <h1>Ej4</h1>
         <button onclick="ejercicio4()">Ej4</button>
     </div>
 
-    <div>
-        <button onclick="duplicarNumeros()">duplicar</button>
+    <div class="ejercicio">
+        <h1>Duplicar</h1>
+        <button onclick="duplicarNumeros()">Duplicar</button>
     </div>
     
-    <div>
+    <div class="ejercicio">
+        <h1>Generar Triangulos</h1>
         <button onclick="triangulo()">Generar Triángulos</button>
     </div>
 
-    <div>
+    <div class="ejercicio">
+        <h1>Mostrar nombres con "A"</h1>
    <input type="text" id="nombres" placeholder="Ej: Ana, Pedro, Alberto, Maria" required>
   <button type="button" onclick="mostrarNombresConA()">Mostrar</button>
-  <div id="resultado"></div>
     </div> 
+
+    <div class="ejercicio">
+        <h1>Reemplazar Palabras</h1>
+        <input type="text" id="cosas" placeholder="Ingrese una cadena de texto" required>
+        <input type="text" id="palabraParaReemplazar" placeholder="Ingrese la palabra que desea reemplazar" required>
+        <input type="text" id="palabraDeReemplazo" placeholder="Ingrese la nueva palabra de reemplazo" required>
+        <button onclick="reemplazarPalabras()">Reemplazar Palabras</button>
+    </div>
+    <div class="ejercicio">
+        <h1>Cortar Texto</h1>
+        <p>Ingrese su texto y luego un número con los dígitos que quiera mostrar desde el principio</p>
+           <input type="text" id="texto" placeholder="Ingrese un texto" required>
+           <input type="number" id= "numero" placeholder="Ingrese un numero" required>
+           <button type="button" onclick="CortarTexto()">cortar</button>
+    </div>
+
+    <div class="ejercicio">
+        <h1>String con separador</h1>    
+        <p>Ingrese una lista de elementos separados por coma:</p>
+        <input type="text" id="lista" placeholder="Ej: enero, febrero, marzo, abril..." required>
+        <button onclick="stringConSeparador()">MostrarLista</button>   
+    </div>
+    <div class="ejercicio">
+    <h1>Calculadora de Recaudación</h1>
+    <p>Ingrese un texto de formato nombre:total para calcular la Recaudación total</p>
+        <input type="text" id="pedidos" placeholder="Ej: Pizza:15.50, Hamburguesa:8.75, Bebidas:4.25" required>
+        <button onclick="calcularRecaudacion()">Calcular Recaudación</button>
+    </div>
     
     <script src="./js/ejercicios.js"></script>
-    <script src="./js/utils.js"></script>
+    <script src="./js/utils.js"></script> 
 </body>
 </html>
